@@ -1,0 +1,16 @@
+# Hashed build files never change: cache forever. The page itself is never cached,
+# so a new version shows up on the next open (spec 0001, Caching).
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+# The service worker and the manifest must never be stale (spec 0006, AC-17).
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+# The link preview image: apps cache it themselves; a day here lets a new one show up.
+/og.png
+  Cache-Control: public, max-age=86400

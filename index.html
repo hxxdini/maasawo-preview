@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1b1f" />
+    <title>Maas'awo: ride a boda through real Kampala</title>
+    <meta name="description" content="A free Ugandan driving game in your browser. Ride a boda boda through real downtown Kampala, carry passengers, pay off your bike and climb to the matatu and the bus. Plays on any phone, no download." />
+    <link rel="canonical" href="https://hxxdini.github.io/maasawo-preview/" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="icons/favicon-32.png" sizes="32x32" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Link previews (WhatsApp, Facebook, X, Telegram). The Worker rewrites the og:/twitter: title and
+         description for a challenge link (?c=&n=), so keep the data-preview markers (worker/preview.ts). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Maas'awo" />
+    <meta property="og:url" content="https://hxxdini.github.io/maasawo-preview/" />
+    <meta property="og:title" content="Maas'awo: ride a boda through real Kampala" data-preview="title" />
+    <meta property="og:description" content="Free Ugandan driving game. Carry passengers, dodge matatus, pay off your boda. Tap to play, no download." data-preview="description" />
+    <meta property="og:image" content="https://hxxdini.github.io/maasawo-preview/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A boda rider on Kimathi Avenue, Kampala, at sunset, under the Maas'awo sign." />
+    <meta property="og:locale" content="en_UG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maas'awo: ride a boda through real Kampala" data-preview="title" />
+    <meta name="twitter:description" content="Free Ugandan driving game. Carry passengers, dodge matatus, pay off your boda. Tap to play, no download." data-preview="description" />
+    <meta name="twitter:image" content="https://hxxdini.github.io/maasawo-preview/og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Maas'awo",
+        "url": "https://hxxdini.github.io/maasawo-preview/",
+        "image": "https://hxxdini.github.io/maasawo-preview/og.png",
+        "description": "A free Ugandan driving game in the browser. Ride a boda boda through real downtown Kampala, carry passengers and parcels, pay off your bike and work up to the matatu and the bus.",
+        "genre": ["Driving", "Simulation"],
+        "gamePlatform": ["Web browser", "Android", "iOS"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "inLanguage": ["en", "lg"],
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "UGX" }
+      }
+    </script>
+    <style>html,body{background:#1b1b1f;margin:0}#first{z-index:50;box-sizing:border-box;text-align:center;color:#fffaf0;background:#1b1b1f;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:16px;font:700 17px/1.35 system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;display:flex;position:fixed;top:0;bottom:0;left:0;right:0}#first img{border-radius:20px;width:96px;height:96px}#first h1{letter-spacing:1px;color:#ffd23f;text-shadow:0 4px #5c1712;margin:4px 0 0;font-size:44px;line-height:1}#first p{max-width:22em;margin:0}#first .first-line{font-size:19px}#first .first-load{background:#3a3530;border-radius:4px;width:180px;height:8px;margin-top:8px;overflow:hidden}#first .first-load span{background:#f4c430;border-radius:4px;width:40%;height:100%;animation:1.1s ease-in-out infinite alternate first-load;display:block}#first .first-wait{color:#cfc6b4;font-size:15px;font-weight:600}#first .first-keys{color:#cfc6b4;font-size:15px;font-weight:600;display:none}@media (hover:hover) and (pointer:fine){#first .first-keys{display:block}}@keyframes first-load{0%{transform:translate(-20%)}to{transform:translate(170%)}}@media (prefers-reduced-motion:reduce){#first .first-load span{width:100%;animation:none}}</style>
+    <script type="module" crossorigin src="./assets/index-LOnOWrQ4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B5IYXamc.css">
+  </head>
+  <body>
+    <div id="first" role="status">
+      <img src="icons/icon.svg" alt="" />
+      <h1>MAAS'AWO</h1>
+      <p class="first-line" data-preview="line">Ride a boda through real Kampala.</p>
+      <div class="first-load" aria-hidden="true"><span></span></div>
+      <p class="first-wait">Loading Kampala…</p>
+      <p class="first-keys">Arrows or WASD to ride · Space brakes</p>
+    </div>
+    <canvas id="game"></canvas>
+    <div id="hud"></div>
+    <!-- Read by search engines and by anyone without JavaScript; the game never shows it. -->
+    <noscript>
+      <h1>Maas'awo</h1>
+      <p>A free Ugandan driving game. Ride a boda boda through real downtown Kampala: Kampala Road, Kikuubo,
+        the taxi parks and Nakasero. Pick up passengers, carry parcels, ride through the rain, pay off your
+        bike and save for the next vehicle on the ladder: special hire, matatu, truck and bus.</p>
+      <p>Maas'awo needs JavaScript to run. It plays in the browser on any Android phone, iPhone or computer,
+        and can be added to the home screen to play offline.</p>
+    </noscript>
+  </body>
+</html>
